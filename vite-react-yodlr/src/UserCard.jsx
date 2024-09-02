@@ -12,7 +12,8 @@ const UserCard = ({user}) => {
                 <CardText>
                     ID: {user.id}<br/>
                     Email: {user.email}<br/>
-                    Status: {user.state}
+                    Status: {user.state}<br/>
+                    <Link to={`/admin/${user.id}`}>Edit User</Link>
                 </CardText>
             </CardBody>
         </Card>

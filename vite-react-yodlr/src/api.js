@@ -19,7 +19,8 @@ class YodlrApi {
         
         console.debug("API CALL:", endpoint, data, method);
         try {
-            return await axios({ url, method, data }).data;
+            let response = await axios({ url, method, data })
+            return response.data;
         } catch (err) {
             console.error("API Error:", err.response);
             let message = err.response.data.error.message;
@@ -52,7 +53,7 @@ class YodlrApi {
     static async updateUser(id, data) {
         data.id = id;
         
-        let res = await this.request("users/", {data}, "put")
+        let res = await this.request(`users/${id}`, {data}, "put")
         return res;
     }
     

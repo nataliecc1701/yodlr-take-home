@@ -16,6 +16,7 @@ const AdminPage = () => {
     useEffect(() => {
         async function listUsers() {
             const res = await YodlrApi.getUsers();
+            console.log("API response:", res)
             setUsers(res);
             setIsLoading(false);
         }

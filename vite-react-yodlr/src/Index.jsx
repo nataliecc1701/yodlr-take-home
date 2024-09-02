@@ -9,8 +9,8 @@ const Index = () => {
     return <>
     <h1>Yodlr Design Challenge</h1>
     <p>
-      <Link to="/signup.html">Registration Page</Link><br/>
-      <Link to="/admin.html">Admin Page</Link>
+      <Link to="/signup">Registration Page</Link><br/>
+      <Link to="/admin">Admin Page</Link>
     </p></>
 }
 

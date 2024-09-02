@@ -44,7 +44,8 @@ router.delete('/:id', function(req, res) {
 
 /* Update a user by id */
 router.put('/:id', function(req, res, next) {
-  var user = req.body;
+  var user = req.body.data;
+  console.log(user)
   if (user.id != req.params.id) {
     return next(new Error('ID paramter does not match body'));
   }
