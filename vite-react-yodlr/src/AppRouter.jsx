@@ -7,7 +7,7 @@ import UserForm from "./UserForm";
 
 /** handle everything with client-side routing */
 
-const Router = () => {
+const AppRouter = () => {
     return <BrowserRouter>
         <Routes>
             <Route exact path="/" element={<Index />}/>
@@ -18,4 +18,4 @@ const Router = () => {
     </BrowserRouter>
 };
 
-export default Router;
+export default AppRouter;
