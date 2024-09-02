@@ -39,6 +39,27 @@ class YodlrApi {
         let res = await this.request("users/", newUser, "post");
         return res.user;
     }
+    
+    /** get a specific user by Id */
+    
+    static async getUser(id) {
+        let res = await this.request(`users/${id}`);
+        return res;
+    }
+    
+    /** update a user */
+    
+    static async updateUser(id, data) {
+        data.id = id;
+        
+        let res = await this.request("users/", {data}, "put")
+        return res;
+    }
+    
+    static async deleteUser(id) {
+        let res = await this.request(`users/${id}`, {}, "delete");
+        return res;
+    }
 }
 
 export default YodlrApi;
