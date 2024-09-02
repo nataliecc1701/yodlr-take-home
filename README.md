@@ -53,7 +53,12 @@ Once the dependancies are installed, you can start the application server by run
 npm start
 ```
 
-Once the server is running, you can access the start page (index.html) by opening your browser to [http://localhost:3000](http://localhost:3000).
+Once the server is running, you can run the front end by opening another shell to the vite-react-yodlr folder and running
+```
+npm run dev
+```
+
+This will start the front end on [http://localhost:5173](http://localhost:5173)
 
 To stop the server, press CTRL-C.
 
